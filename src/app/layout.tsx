@@ -40,6 +40,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { Navbar } from "@/src/components/layout/Navbar";
 import { Footer } from "@/src/components/layout/Footer";
+import { ThemeProvider } from "../providers/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Personal Finance Dashboard",
@@ -48,18 +49,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-theme="dark">
-      <body className="min-h-screen flex flex-col">
+    <html lang="en" >
+      <body className="min-h-screen flex flex-col transition-colors duration-300">
+        <ThemeProvider>
         {/* Navbar fixed at the top */}
         <Navbar />
 
-        {/* Main page content */}
-        <main className="flex-1 container mx-auto px-4 py-6">
-          {children}
-        </main>
+          {/* Main page content */}
+          <main className="flex-1 container mx-auto px-4 py-6">
+            {children}
+          </main>
 
-        {/* Footer fixed at the bottom */}
-        <Footer />
+          {/* Footer fixed at the bottom */}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

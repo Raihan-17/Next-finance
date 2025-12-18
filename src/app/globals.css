@@ -29,10 +29,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global body styling */
-body {
-  @apply min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-slate-50 antialiased;
+/* Light theme background */
+body.retro-bg {
+  @apply bg-gradient-to-br from-yellow-50 via-amber-100 to-rose-100 text-stone-900;
 }
+
+
+/* Dark theme background */
+body.dark-bg {
+  @apply bg-gradient-to-br from-slate-900 via-slate-950 to-black text-slate-50;
+}
+
 
 /* Glassmorphism helper class for reusable panels */
 .glass-panel {

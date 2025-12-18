@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { ThemeToggle } from "../theme/ThemeToggle";
 
 export const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -9,7 +10,7 @@ export const Navbar = () => {
   const toggleMobile = () => setIsMobileOpen((prev) => !prev);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-white/10 bg-slate-900/60 backdrop-blur-xl">
+    <header className="sticky top-0 z-30 border-b border-base-300 bg-base-100/60 backdrop-blur-xl">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Left: Logo / Brand */}
         <div className="flex items-center gap-2">
@@ -20,28 +21,29 @@ export const Navbar = () => {
         </div>
 
         {/* Center: Desktop nav links */}
-        <div className="hidden md:flex items-center gap-6 text-sm text-slate-300">
-          <Link href="/dashboard" className="hover:text-slate-50 transition">
+        <div className="hidden md:flex items-center gap-6 text-sm text-base-content/70">
+          <Link href="/dashboard" className="hover:text-base-content transition">
             Dashboard
           </Link>
-          <Link href="/transactions" className="hover:text-slate-50 transition">
+          <Link href="/transactions" className="hover:text-base-content transition">
             Transactions
           </Link>
-          <Link href="/budgets" className="hover:text-slate-50 transition">
+          <Link href="/budgets" className="hover:text-base-content transition">
             Budgets
           </Link>
-          <Link href="/settings" className="hover:text-slate-50 transition">
+          <Link href="/settings" className="hover:text-base-content transition">
             Settings
           </Link>
         </div>
 
         {/* Right: placeholder for theme toggle + user/avatar */}
         <div className="hidden md:flex items-center gap-3">
-          {/* TODO: ThemeToggle will go here later */}
+          <ThemeToggle />
           <button className="btn btn-ghost btn-xs rounded-full border border-white/10 bg-white/5 backdrop-blur">
             <span className="h-6 w-6 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500" />
             <span className="ml-2 text-xs text-slate-200">Abu</span>
           </button>
+          
         </div>
 
         {/* Mobile: hamburger */}
@@ -61,8 +63,8 @@ export const Navbar = () => {
 
       {/* Mobile menu */}
       {isMobileOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-950/90 backdrop-blur-xl">
-          <div className="container mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-slate-200">
+        <div className="md:hidden border-t border-white/10 bg-base-100/90 backdrop-blur-xl">
+          <div className="container mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-base-content">
             <Link href="/dashboard" onClick={() => setIsMobileOpen(false)}>
               Dashboard
             </Link>
@@ -79,9 +81,7 @@ export const Navbar = () => {
             {/* Placeholder for theme toggle in mobile */}
             <div className="pt-2 border-t border-white/10 flex items-center justify-between">
               <span className="text-xs text-slate-400">Theme</span>
-              <button className="btn btn-xs btn-outline rounded-full border-white/30">
-                Toggle theme
-              </button>
+                <ThemeToggle />
             </div>
           </div>
         </div>
