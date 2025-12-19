@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ThemeToggle } from "../theme/ThemeToggle";
+import { useSession, signOut } from "next-auth/react";
 
 export const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { data: session } = useSession();
 
   const toggleMobile = () => setIsMobileOpen((prev) => !prev);
 
@@ -39,12 +41,24 @@ export const Navbar = () => {
         {/* Right: placeholder for theme toggle + user/avatar */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <button className="btn btn-ghost btn-xs rounded-full border border-white/10 bg-white/5 backdrop-blur">
-            <span className="h-6 w-6 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500" />
-            <span className="ml-2 text-xs text-slate-200">Abu</span>
-          </button>
-          
-        </div>
+
+          {session?.user ? (
+            <div className="flex items-center gap-2">
+              <img
+                src={session.user.image || "/default-avatar.png"}
+                className="h-7 w-7 rounded-full"
+              />
+      <span className="text-sm">{session.user.name}</span>
+      <button onClick={() => signOut()} className="btn btn-xs btn-outline">
+        Logout
+      </button>
+    </div>
+  ) : (
+    <a href="/login" className="btn btn-sm btn-primary rounded-full">
+      Sign In
+    </a>
+  )}
+</div>
 
         {/* Mobile: hamburger */}
         <button

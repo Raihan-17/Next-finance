@@ -41,6 +41,8 @@ import { ReactNode } from "react";
 import { Navbar } from "@/src/components/layout/Navbar";
 import { Footer } from "@/src/components/layout/Footer";
 import { ThemeProvider } from "../providers/ThemeProvider";
+import { SessionProviderWrapper } from "../providers/SessionProviderWrapper";
+// import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Personal Finance Dashboard",
@@ -51,6 +53,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" >
       <body className="min-h-screen flex flex-col transition-colors duration-300">
+        {/* <SessionProvider> */}
+        <SessionProviderWrapper>
         <ThemeProvider>
         {/* Navbar fixed at the top */}
         <Navbar />
@@ -63,6 +67,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Footer fixed at the bottom */}
           <Footer />
         </ThemeProvider>
+        {/* </SessionProvider> */}
+        </SessionProviderWrapper>
       </body>
     </html>
   );
