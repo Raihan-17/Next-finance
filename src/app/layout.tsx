@@ -42,6 +42,7 @@ import { Navbar } from "@/src/components/layout/Navbar";
 import { Footer } from "@/src/components/layout/Footer";
 import { ThemeProvider } from "../providers/ThemeProvider";
 import { SessionProviderWrapper } from "../providers/SessionProviderWrapper";
+import { ReduxProvider } from "../providers/ReduxProvider";
 // import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
@@ -56,16 +57,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* <SessionProvider> */}
         <SessionProviderWrapper>
         <ThemeProvider>
-        {/* Navbar fixed at the top */}
+          <ReduxProvider>
         <Navbar />
 
           {/* Main page content */}
           <main className="flex-1 container mx-auto px-4 py-6">
             {children}
           </main>
-
-          {/* Footer fixed at the bottom */}
           <Footer />
+          </ReduxProvider>
         </ThemeProvider>
         {/* </SessionProvider> */}
         </SessionProviderWrapper>

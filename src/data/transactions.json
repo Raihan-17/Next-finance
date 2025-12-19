@@ -1,0 +1,8 @@
+[
+  { "id": 1, "date": "2025-12-01", "category": "Food", "amount": -20 },
+  { "id": 2, "date": "2025-12-02", "category": "Transport", "amount": -15 },
+  { "id": 3, "date": "2025-12-03", "category": "Salary", "amount": 500 },
+  { "id": 4, "date": "2025-12-04", "category": "Shopping", "amount": -60 },
+  { "id": 5, "date": "2025-12-05", "category": "Entertainment", "amount": -30 },
+  { "id": 6, "date": "2025-12-06", "category": "Bills", "amount": -100 }
+]
