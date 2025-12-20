@@ -35,12 +35,12 @@ export const FeatureSection = ({
           className="
             relative
             w-64 h-40
-            glass-panel
+            glass-panel rounded-2xl
             flex items-center justify-center
           "
         >
           {/* Glow */}
-          <div className="absolute inset-0 -z-10 blur-2xl opacity-30 bg-gradient-to-br from-primary/40 to-secondary/40" />
+          <div className="absolute inset-0 -z-10 blur-lg  opacity-30 bg-gradient-to-br from-primary to-secondary" />
 
           <Icon className="h-12 w-12 opacity-80" />
         </motion.div>
@@ -48,7 +48,7 @@ export const FeatureSection = ({
 
       {/* Text side */}
       <div
-        className={`glass-panel p-6 ${
+        className={`glass-panel bg-gradient-to-br from-[#3c7b5f] to-[#2c4338] p-6 rounded-2xl ${
           reverse ? "md:order-1" : ""
         }`}
       >
