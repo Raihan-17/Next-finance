@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^2.11.2",
     "daisyui": "^5.5.14",
     "framer-motion": "^12.23.26",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.562.0",
     "next": "16.0.10",
     "next-auth": "5.0.0-beta.30",
@@ -19,7 +20,8 @@
     "react-dom": "19.2.1",
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

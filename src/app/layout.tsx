@@ -36,6 +36,7 @@
 
 
 import type { Metadata } from "next";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { Navbar } from "@/src/components/layout/Navbar";
@@ -45,14 +46,22 @@ import { SessionProviderWrapper } from "../providers/SessionProviderWrapper";
 import { ReduxProvider } from "../providers/ReduxProvider";
 // import { SessionProvider } from "next-auth/react";
 
+
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
+  subsets: ["latin"],
+  weight: "700",
+
+});
+
 export const metadata: Metadata = {
-  title: "Personal Finance Dashboard",
+  title: "FinScope-Dashboard",
   description: "Track your finances with a modern, glassmorphism-inspired dashboard",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" >
+    <html lang="en"  className={` ${ubuntu.className} `}>
       <body className="min-h-screen flex flex-col transition-colors duration-300">
         {/* <SessionProvider> */}
         <SessionProviderWrapper>

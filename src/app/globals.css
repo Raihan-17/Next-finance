@@ -43,7 +43,7 @@ body.dark-bg {
 
 /* Glassmorphism helper class for reusable panels */
 .glass-panel {
-  @apply rounded-2xl border border-white/10 bg-white/5 shadow-lg shadow-black/40 backdrop-blur-xl;
+  @apply  border border-white/10 bg-white/6 shadow-lg shadow-black/40 backdrop-blur-lg;
 }
 
 /* Subtle scrollbars (optional) */
