@@ -12,7 +12,7 @@ export const Footer = () => {
       <div
         className="
           relative  bg-gradient-to-b
-    from-[#4ba195] to-[#0f5b42]
+    from-[#46968c] to-[#0b412f]
     
     border-t border-black dark:border-white/10
          

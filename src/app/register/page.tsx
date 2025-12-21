@@ -63,28 +63,26 @@ export default function RegisterPage() {
   };
 
   const handleGoogleSignIn = async () => {
-    setGoogleLoading(true);
-    try {
-      const result = await signIn("google", {
-        redirect: false,
-        callbackUrl: "/",
-      });
+  setGoogleLoading(true);
+  try {
+    const result = await signIn("google", {
+      redirect: false,
+      callbackUrl: "/",
+    });
 
-      if (result?.error) {
-        toast.error("Google sign-in failed");
-      } else {
-        toast.success("Account created with Google!");
-        if (result?.url) {
-          router.push(result.url);
-          router.refresh();
-        }
-      }
-    } catch (error) {
+    if (!result || result.error) {
       toast.error("Google sign-in failed");
-    } finally {
-      setGoogleLoading(false);
+      return;
     }
-  };
+
+    toast.success("Signed in with Google!");
+    router.push(result.url || "/");
+    router.refresh();
+  } finally {
+    setGoogleLoading(false);
+  }
+};
+
 
   return (
     <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">

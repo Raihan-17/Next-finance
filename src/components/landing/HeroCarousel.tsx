@@ -42,7 +42,8 @@ export const HeroCarousel = () => {
     absolute
     left-1/2 top-1/2
     -translate-x-1/2 -translate-y-1/2
-    w-64 h-40
+     w-64 h-40 
+    cursor-pointer
     overflow-hidden
     rounded-2xl
     shadow-lg

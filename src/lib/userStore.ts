@@ -1,1 +1,7 @@
-export const users: any[] = [];
+export const users: {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  image?: string;
+}[] = [];

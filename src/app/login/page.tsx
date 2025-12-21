@@ -13,58 +13,61 @@ export default function LoginPage() {
   const [googleLoading, setGoogleLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
+  e.preventDefault();
+  setLoading(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const email = formData.get("email") as string;
-    const password = formData.get("password") as string;
+  const formData = new FormData(e.currentTarget);
+  const email = formData.get("email") as string;
+  const password = formData.get("password") as string;
 
-    try {
-      const result = await signIn("credentials", {
-        email,
-        password,
-        redirect: false,
-      });
+  try {
+    const result = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
 
-      if (result?.error) {
-        toast.error("Invalid email or password");
-      } else {
-        toast.success("Login successful!");
-        router.push("/");
-        router.refresh();
-      }
-    } catch (error) {
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
+    if (!result) {
+      toast.error("No response from server");
+      return;
     }
-  };
 
-  const handleGoogleSignIn = async () => {
-    setGoogleLoading(true);
-    try {
-      const result = await signIn("google", {
-        redirect: false,
-        callbackUrl: "/",
-      });
+    if (result.error) {
+      toast.error("Invalid email or password");
+      return;
+    }
 
-      if (result?.error) {
-        toast.error("Google sign-in failed");
-      } else {
-        toast.success("Google sign-in successful!");
-        if (result?.url) {
-          router.push(result.url);
-          router.refresh();
-        }
-      }
-    } catch (error) {
+    toast.success("Login successful!");
+    router.push("/");
+    router.refresh();
+  } catch {
+    toast.error("Unexpected error");
+  } finally {
+    setLoading(false);
+  }
+};
+
+const handleGoogleSignIn = async () => {
+  setGoogleLoading(true);
+  try {
+    const result = await signIn("google", {
+      redirect: false,
+      callbackUrl: "/",
+    });
+
+    if (!result || result.error) {
       toast.error("Google sign-in failed");
-    } finally {
-      setGoogleLoading(false);
+      return;
     }
-  };
+
+    toast.success("Signed in with Google!");
+    router.push(result.url || "/");
+    router.refresh();
+  } finally {
+    setGoogleLoading(false);
+  }
+};
+
 
   return (
     <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
