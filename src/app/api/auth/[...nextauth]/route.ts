@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-import { users } from "@/src/lib/userStore";
+import { users } from "@/lib/userStore";
 
 const handler = NextAuth({
   providers: [

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AuthCard } from "@/src/components/auth/AuthCard";
+import { AuthCard } from "@/components/auth/AuthCard";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";

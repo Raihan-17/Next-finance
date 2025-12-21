@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AuthCard } from "@/src/components/auth/AuthCard";
+import { AuthCard } from "@/components/auth/AuthCard";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";

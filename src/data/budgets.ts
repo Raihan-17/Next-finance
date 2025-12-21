@@ -1,0 +1,11 @@
+import { Budget } from "@/types/finance";
+
+export const budgetsData: Budget[] = [
+  { category: "Food", limit: 600, used: 420 },
+  { category: "Transport", limit: 300, used: 180 },
+  { category: "Shopping", limit: 500, used: 460 },
+  { category: "Entertainment", limit: 350, used: 310 },
+  { category: "Bills", limit: 800, used: 720 },
+  { category: "Health", limit: 400, used: 220 },
+  { category: "Travel", limit: 700, used: 500 }
+];
