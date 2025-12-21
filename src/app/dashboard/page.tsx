@@ -93,12 +93,30 @@
 // }
 
 import { KpiSection } from "@/components/dashboard/KpiSection";
+import { MonthlyBarChart } from "@/components/dashboard/charts/MonthlyBarChart";
+import { WeeklyLineChart } from "@/components/dashboard/charts/WeeklyLineChart";
+import { ExpensePieChart } from "@/components/dashboard/charts/ExpensePieChart";
+import { BudgetProgress } from "@/components/dashboard/BudgetProgress";
+import { TransactionsTable } from "@/components/dashboard/TransactionTable";
+import { InsightCards } from "@/components/dashboard/InsightCards";
 
 export default function DashboardOverviewPage() {
   return (
     <div className="space-y-6">
       <KpiSection />
-      {/* Add charts here */}
+      <InsightCards />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <MonthlyBarChart />
+        <WeeklyLineChart />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <ExpensePieChart />
+        <BudgetProgress />
+      </div>
+
+      <TransactionsTable />
+
     </div>
   );
 }

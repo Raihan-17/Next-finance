@@ -36,7 +36,7 @@ export default function DashboardSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 p-6 border-r border-white/10 glass-panel rounded-none">
+    <aside className="w-64 p-6 h-full border-r border-white/10 glass-panel rounded-none">
       <h2 className="mb-6 text-lg font-semibold">
         Finance Dashboard
       </h2>
