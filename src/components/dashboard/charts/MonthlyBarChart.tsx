@@ -16,7 +16,7 @@ export const MonthlyBarChart = () => {
   const data = useSelector(selectMonthlyChartData);
 
   return (
-    <div className="glass-panel p-6 h-[320px]">
+    <div className="glass-panel p-8  h-[320px]">
       <h3 className="text-sm font-medium mb-4 opacity-80">
         Monthly Performance
       </h3>

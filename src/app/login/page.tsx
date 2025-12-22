@@ -70,12 +70,12 @@ const handleGoogleSignIn = async () => {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="flex items-center justify-center min-h-screen px-4 ">
       <AuthCard>
-        <h2 className="text-2xl font-bold mb-2 text-center text-gray-800 dark:text-white">
+        <h2 className="text-3xl font-bold mb-2 text-center text-gray-600 ">
           Welcome Back
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 text-center mb-6">
+        <p className="text-gray-700  text-center mb-6">
           Sign in to your account
         </p>
 
@@ -83,45 +83,45 @@ const handleGoogleSignIn = async () => {
         <button
           onClick={handleGoogleSignIn}
           disabled={googleLoading}
-          className="btn btn-outline w-full mb-6 flex items-center justify-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
+          className="btn btn-outline w-full mb-6 flex items-center justify-center gap-3 transform-3d duration-300 hover:scale-105"
         >
           <FcGoogle className="text-xl" />
           <span>{googleLoading ? "Signing in..." : "Sign in with Google"}</span>
         </button>
 
-        <div className="divider text-sm text-gray-500">OR</div>
+        <div className="divider text-sm text-gray-600">OR</div>
 
         {/* Credentials Form */}
         <form onSubmit={handleLogin} className="flex flex-col gap-4">
           <div>
             <label className="label">
-              <span className="label-text text-gray-700 dark:text-gray-300">Email</span>
+              <span className="label-text text-gray-700 dark:text-gray-500">Email</span>
             </label>
             <input
               name="email"
               placeholder="your@email.com"
               type="email"
-              className="input input-bordered w-full bg-white dark:bg-gray-800"
+              className="input input-bordered w-full bg-white dark:bg-gray-600"
               required
             />
           </div>
 
           <div>
             <label className="label">
-              <span className="label-text text-gray-700 dark:text-gray-300">Password</span>
+              <span className="label-text text-gray-700 dark:text-gray-500">Password</span>
             </label>
             <input
               name="password"
               placeholder="••••••••"
               type="password"
-              className="input input-bordered w-full bg-white dark:bg-gray-800"
+              className="input input-bordered w-full dark:bg-gray-600"
               required
             />
           </div>
 
           <button
             type="submit"
-            className="btn btn-primary w-full mt-2"
+            className="btn btn-neutral transition-3d duration-400 hover:scale-110 w-full mt-2"
             disabled={loading}
           >
             {loading ? (
@@ -135,11 +135,11 @@ const handleGoogleSignIn = async () => {
           </button>
         </form>
 
-        <p className="text-center text-sm mt-6 text-gray-600 dark:text-gray-300">
+        <p className="text-center text-sm mt-6 text-gray-600 dark:text-gray-600">
           Don&apos;t have an account?{" "}
           <a
             href="/register"
-            className="text-primary font-medium hover:underline transition-colors"
+            className="text-primary font-bold hover:underline  transition-3d duration-300 hover:scale-110"
           >
             Create account
           </a>

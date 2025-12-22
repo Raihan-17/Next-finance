@@ -14,16 +14,16 @@ export const ThemeToggle = () => {
         relative flex items-center justify-center
         h-9 w-9 rounded-full
         bg-[#376451] backdrop-blur
-        border border-white/15
+        
         transition-all duration-300
-        hover:scale-105
+        hover:scale-115
         data-[theme=retro]:hover:bg-accent/20
       "
     >
       {theme === "dark" ? (
-        <Moon className="h-4 w-4 text-slate-200" />
+        <Moon className="h-5 w-5 text-slate-200" />
       ) : (
-        <Sun className="h-4 w-4 text-amber-600" />
+        <Sun className="h-5 w-5 text-amber-300" />
       )}
     </button>
   );

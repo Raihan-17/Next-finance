@@ -85,113 +85,127 @@ export default function RegisterPage() {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <AuthCard>
-        <h2 className="text-2xl font-bold mb-2 text-center text-gray-800 dark:text-white">
-          Create Account
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 text-center mb-6">
-          Join our finance community
-        </p>
+ <div className="flex items-center justify-center min-h-screen px-4">
+  <AuthCard>
+    <h2 className="text-3xl font-bold mb-2 text-center text-gray-600">
+      Create Account
+    </h2>
 
-        {/* Google Sign Up Button */}
-        <button
-          onClick={handleGoogleSignIn}
-          disabled={googleLoading}
-          className="btn btn-outline w-full mb-6 flex items-center justify-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800"
-        >
-          <FcGoogle className="text-xl" />
-          <span>{googleLoading ? "Creating account..." : "Sign up with Google"}</span>
-        </button>
+    <p className="text-gray-700 text-center mb-6">
+      Join our finance community
+    </p>
 
-        <div className="divider text-sm text-gray-500">OR</div>
+    {/* Google Sign Up */}
+    <button
+      onClick={handleGoogleSignIn}
+      disabled={googleLoading}
+      className="
+        btn btn-outline w-full mb-6
+        flex items-center justify-center gap-3
+        transform-3d duration-300 hover:scale-105
+      "
+    >
+      <FcGoogle className="text-xl" />
+      <span>
+        {googleLoading ? "Creating account..." : "Sign up with Google"}
+      </span>
+    </button>
 
-        <form onSubmit={handleRegister} className="flex flex-col gap-4">
-          <div>
-            <label className="label">
-              <span className="label-text text-gray-700 dark:text-gray-300">Full Name</span>
-            </label>
-            <input
-              name="name"
-              placeholder="John Doe"
-              className="input input-bordered w-full bg-white dark:bg-gray-800"
-              required
-            />
-          </div>
+    <div className="divider text-sm text-gray-600">OR</div>
 
-          <div>
-            <label className="label">
-              <span className="label-text text-gray-700 dark:text-gray-300">Email</span>
-            </label>
-            <input
-              name="email"
-              placeholder="your@email.com"
-              type="email"
-              className="input input-bordered w-full bg-white dark:bg-gray-800"
-              required
-            />
-          </div>
+    {/* Register Form */}
+    <form onSubmit={handleRegister} className="flex flex-col gap-4">
+      <div>
+        <label className="label">
+          <span className="label-text text-gray-600">Full Name</span>
+        </label>
+        <input
+          name="name"
+          placeholder="John Doe"
+          className="input input-bordered w-full bg-gray-600"
+          required
+        />
+      </div>
 
-          <div>
-            <label className="label">
-              <span className="label-text text-gray-700 dark:text-gray-300">Password</span>
-            </label>
-            <input
-              name="password"
-              placeholder="••••••••"
-              type="password"
-              className="input input-bordered w-full bg-white dark:bg-gray-800"
-              minLength={6}
-              required
-            />
-            <label className="label">
-              <span className="label-text-alt text-gray-500">Minimum 6 characters</span>
-            </label>
-          </div>
+      <div>
+        <label className="label">
+          <span className="label-text text-gray-700">Email</span>
+        </label>
+        <input
+          name="email"
+          placeholder="your@email.com"
+          type="email"
+          className="input input-bordered w-full bg-gray-600"
+          required
+        />
+      </div>
 
-          <div>
-            <label className="label">
-              <span className="label-text text-gray-700 dark:text-gray-300">
-                Profile Image URL <span className="text-gray-500">(Optional)</span>
-              </span>
-            </label>
-            <input
-              name="image"
-              placeholder="https://example.com/your-photo.jpg"
-              className="input input-bordered w-full bg-white dark:bg-gray-800"
-            />
-          </div>
+      <div>
+        <label className="label">
+          <span className="label-text text-gray-700">Password</span>
+        </label>
+        <input
+          name="password"
+          placeholder="••••••••"
+          type="password"
+          className="input input-bordered w-full bg-gray-600"
+          minLength={6}
+          required
+        />
+        <label className="label">
+          <span className="label-text-alt text-gray-500">
+            Minimum 6 characters
+          </span>
+        </label>
+      </div>
 
-          <button
-            type="submit"
-            className="btn btn-primary w-full mt-2"
-            disabled={loading}
-          >
-            {loading ? (
-              <>
-                <span className="loading loading-spinner"></span>
-                Creating account...
-              </>
-            ) : (
-              "Create Account"
-            )}
-          </button>
-        </form>
+      <div>
+        <label className="label">
+          <span className="label-text text-gray-700">
+            Profile Image URL{" "}
+            <span className="text-gray-500">(Optional)</span>
+          </span>
+        </label>
+        <input
+          name="image"
+          placeholder="https://example.com/photo.jpg"
+          className="input input-bordered w-full bg-gray-600"
+        />
+      </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center text-sm mt-6 text-gray-600 dark:text-gray-300"
-        >
-          Already have an account?{" "}
-          <a
-            href="/login"
-            className="text-primary font-medium hover:underline transition-colors"
-          >
-            Sign in
-          </a>
-        </motion.p>
-      </AuthCard>
-    </div>
+      <button
+        type="submit"
+        disabled={loading}
+        className="
+          btn btn-neutral w-full mt-2
+          transition-3d duration-400 hover:scale-110
+        "
+      >
+        {loading ? (
+          <>
+            <span className="loading loading-spinner" />
+            Creating account...
+          </>
+        ) : (
+          "Create Account"
+        )}
+      </button>
+    </form>
+
+    <p className="text-center text-sm mt-6 text-gray-600">
+      Already have an account?{" "}
+      <a
+        href="/login"
+        className="
+          text-primary font-bold
+          transition-3d duration-300 hover:scale-110
+        "
+      >
+        Sign in
+      </a>
+    </p>
+  </AuthCard>
+</div>
+
   );
 }

@@ -24,21 +24,21 @@ export const Navbar = () => {
       >
         {/* Brand */}
         <Link href="/" className="flex items-center gap-1">
-          <Image src={logo} alt="FinScope Logo" width={40} height={40} className="rounded-xl" />
-          <span className="text-xl font-semibold text-[#3c7b5f] tracking-tight">
+          <Image src={logo} alt="FinScope Logo" width={40} height={40} className="rounded-xl hover:scale-115 transform-3d duration-300" />
+          <span className="text-2xl font-semibold text-[#3c7b5f] tracking-tight">
             FinScope
           </span>
         </Link>
 
         {/* Desktop navigation */}
-        <div className="hidden md:flex items-center gap-8 text-sm">
-          <Link href="/" className="hover:text-[#4c7260] transition">
+        <div className="hidden md:flex items-center gap-8 ">
+          <Link href="/" className="hover:text-[#45725d] transition hover:scale-115">
             Home
           </Link>
-          <Link href="/features" className="hover:text-[#4c7260] transition">
+          <Link href="/features" className="hover:text-[#4c7260] transition hover:scale-115">
             Features
           </Link>
-          <Link href="/dashboard" className="hover:text-[#4c7260] transition">
+          <Link href="/dashboard" className="hover:text-[#4c7260] transition hover:scale-115">
             Dashboard
           </Link>
         </div>
@@ -48,16 +48,16 @@ export const Navbar = () => {
           <ThemeToggle />
 
           {session?.user ? (
-            <div className="flex items-center gap-3 pl-2 border-l border-white/10">
+            <div className="flex items-center gap-1 pl-2 border-l border-white/10">
               <span className="text-sm opacity-80">
                 {session.user.name}
               </span>
               <button
                 onClick={() => signOut()}
                 className="
-                  btn btn-xs rounded-full
-                  bg-[#6b9381] border border-white/20
-                  hover:bg-white/20
+                  btn btn-xs rounded-full p-4
+                  bg-[#45705d] hover:scale-110 
+                  hover:bg-[#2c4338]
                 "
               >
                 Logout
@@ -80,11 +80,11 @@ export const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsMobileOpen((p) => !p)}
-          className="md:hidden rounded-full border border-white/15 p-2 backdrop-blur"
+          className="md:hidden rounded-full  p-2 backdrop-blur transform-3d duration-300 hover:scale-115"
         >
           <div className="space-y-1">
-            <span className="block h-0.5 w-5 bg-current" />
-            <span className="block h-0.5 w-5 bg-current" />
+            <span className="block h-0.5 w-7 bg-current" />
+            <span className="block h-0.5 w-6 bg-current" />
             <span className="block h-0.5 w-5 bg-current" />
           </div>
         </button>
@@ -95,18 +95,18 @@ export const Navbar = () => {
         <div
           className="
             md:hidden
-            bg-base-100/80 backdrop-blur-2xl
+            bg-green-500/20 backdrop-blur-2xl
             border-b border-white/10
           "
         >
-          <div className="flex flex-col gap-4 px-6 py-4 text-sm">
-            <Link href="/" onClick={() => setIsMobileOpen(false)}>
+          <div className="flex flex-col gap-4 px-6 py-4 text-sm ">
+            <Link href="/" onClick={() => setIsMobileOpen(false)} className="hover:text-[#4c7260] transition">
               Home
             </Link>
-            <Link href="/features" onClick={() => setIsMobileOpen(false)}>
+            <Link href="/features" onClick={() => setIsMobileOpen(false)} className="hover:text-[#4c7260] transition">
               Features
             </Link>
-            <Link href="/dashboard" onClick={() => setIsMobileOpen(false)}>
+            <Link href="/dashboard" onClick={() => setIsMobileOpen(false)} className="hover:text-[#4c7260] transition">
               Dashboard
             </Link>
 
@@ -126,7 +126,7 @@ export const Navbar = () => {
                       signOut();
                       setIsMobileOpen(false);
                     }}
-                    className="btn btn-xs btn-outline"
+                    className="btn btn-sm bg-[#45705d] hover:bg-[#2c4338] transform-3d duration-400 hover:scale-110"
                   >
                     Logout
                   </button>
@@ -135,7 +135,7 @@ export const Navbar = () => {
                 <Link
                   href="/login"
                   onClick={() => setIsMobileOpen(false)}
-                  className="btn btn-sm btn-primary w-full"
+                  className="btn btn-sm btn-neutral w-full"
                 >
                   Sign In
                 </Link>

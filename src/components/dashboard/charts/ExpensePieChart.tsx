@@ -39,7 +39,7 @@ export const ExpensePieChart = () => {
   );
 
   return (
-    <div className="glass-panel p-6 h-[320px]">
+    <div className="glass-panel p-8 h-[320px]">
       <h3 className="text-sm font-medium mb-4 opacity-80">
         Expense Distribution
       </h3>

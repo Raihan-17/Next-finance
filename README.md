@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+💰 FinScope — Personal Finance Dashboard
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white)
+![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-State_Management-764ABC?logo=redux&logoColor=white)
+![NextAuth](https://img.shields.io/badge/Auth-NextAuth.js-000000?logo=auth0&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-Utility_First-38B2AC?logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animations-EF007A?logo=framer&logoColor=white)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+FinScope is a modern personal finance dashboard built with Next.js App Router, focused on data visualization, UX polish, and scalable frontend architecture.
+It showcases real-world patterns like authentication, protected routes, Redux state management, responsive dashboards, and analytics-driven UI.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✨ Designed with glassmorphism, calm gradients, and a finance-grade UI language.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🚀 Live Features
+🧭 Landing Experience
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Animated hero section with carousel
 
-## Learn More
+Typewriter-style text effects
 
-To learn more about Next.js, take a look at the following resources:
+Dedicated Features page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fully responsive & theme-aware
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📊 Dashboard (Core Focus)
 
-## Deploy on Vercel
+KPI cards (Income, Expense, Savings)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Monthly & weekly analytics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bar, line, and pie charts
+
+Budget usage with progress indicators
+
+Enhanced transaction table
+
+Mobile-friendly sidebar navigation
+
+🔐 Authentication
+
+Email/Password (Credentials)
+
+Google OAuth
+
+Register & login flows with feedback
+
+Protected dashboard routes
+
+Session-based access control (NextAuth v5)
+
+🎨 Theming & UI
+
+Dark & Retro themes
+
+Glassmorphism-inspired components
+
+Minimal gradients compatible with both themes
+
+Responsive design (mobile → desktop)
+
+Consistent motion & hover interactions
+
+🧱 Tech Stack
+Core
+
+Next.js 14+ (App Router)
+
+TypeScript
+
+React
+
+State & Data
+
+Redux Toolkit
+
+Memoized selectors
+
+JSON-based mock analytics data
+
+Authentication
+
+NextAuth (Auth.js v5)
+
+Credentials Provider
+
+Google Provider
+
+Protected server layouts
+
+UI & Motion
+
+Tailwind CSS
+
+DaisyUI
+
+Framer Motion
+
+Lucide Icons / React Icons

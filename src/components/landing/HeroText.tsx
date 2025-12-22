@@ -27,13 +27,13 @@ export const HeroText = () => {
       <div className="mt-4 flex flex-wrap gap-3 justify-center md:justify-start">
         <a
           href="/dashboard"
-          className="btn bg-[#3c7b5f] rounded-full p-4"
+          className="btn bg-[#3c7b5f] rounded-full p-4 hover:scale-110 transition-all duration-400"
         >
           Go to Dashboard
         </a>
         <a
           href="/features"
-          className="btn btn-ghost  p-4 rounded-full border border-[#4c7260] border-2"
+          className="btn btn-ghost  p-4 rounded-full border border-[#4c7260] border-2 hover:scale-110 transition-all duration-400"
         >
           Features
         </a>
