@@ -11,10 +11,10 @@ interface KpiCardProps {
 }
 
 const accentMap = {
-  green: "from-emerald-400/30 to-emerald-600/20",
-  red: "from-rose-400/30 to-rose-600/20",
-  blue: "from-sky-400/30 to-sky-600/20",
-  amber: "from-amber-400/30 to-amber-600/20"
+  green: "from-emerald-600/50 to-emerald-600/20",
+  red: "from-rose-400/80 to-rose-600/30",
+  blue: "from-sky-600/60 to-sky-600/20",
+  amber: "from-amber-600/60 to-amber-600/20"
 };
 
 export const KpiCard = ({
@@ -39,7 +39,7 @@ export const KpiCard = ({
         className={`
           absolute inset-0 -z-10
           bg-gradient-to-br ${accentMap[accent]}
-          blur-2xl opacity-40
+          blur-md opacity-40
         `}
       />
 

@@ -11,6 +11,12 @@ import {
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 
+type ExpenseChartData = {
+  name: string;
+  value: number;
+};
+
+
 const COLORS = [
   "#ef4444",
   "#f97316",
@@ -25,10 +31,10 @@ export const ExpensePieChart = () => {
     (state: RootState) => state.transactions
   );
 
-  const data = Object.values(
+  const data: ExpenseChartData[] = Object.values(
     transactions
       .filter((t) => t.amount < 0)
-      .reduce((acc: any, t) => {
+      .reduce<Record<string, ExpenseChartData>>((acc, t) => {
         acc[t.category] = acc[t.category] || {
           name: t.category,
           value: 0
@@ -39,7 +45,7 @@ export const ExpensePieChart = () => {
   );
 
   return (
-    <div className="glass-panel p-8 h-[320px]">
+    <div className="bg-gray-900/50 p-8 h-[320px]">
       <h3 className="text-sm font-medium mb-4 opacity-80">
         Expense Distribution
       </h3>

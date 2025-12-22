@@ -7,7 +7,7 @@ export const DashboardHeader = () => {
   const user = useSelector(selectUser);
 
   return (
-    <header className="h-16 flex items-center justify-between px-6 border-b border-white/10 bg-base-100/40 backdrop-blur-xl">
+    <header className="h-16 flex items-center justify-between px-6 border-b border-white bg- backdrop-blur-xl">
       <div>
         <p className="text-xs opacity-60">Overview</p>
         <h1 className="text-sm font-semibold">

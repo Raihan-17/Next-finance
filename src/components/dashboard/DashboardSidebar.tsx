@@ -54,8 +54,8 @@ export default function DashboardSidebar() {
                 flex items-center gap-3 px-4 py-2 rounded-lg
                 transition
                 ${active
-                  ? "bg-white/10 font-medium"
-                  : "hover:bg-white/5"}
+                  ? "bg-gray-500 font-medium"
+                  : "hover:bg-gray-700/50"}
               `}
             >
               <Icon className="h-4 w-4 opacity-80" />

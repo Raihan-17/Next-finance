@@ -28,7 +28,7 @@ export const TransactionsTable = () => {
   const transactions = useSelector(selector);
 
   return (
-    <div className="glass-panel p-6">
+    <div className="bg-gray-700/50 p-6">
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
         <h3 className="text-sm font-medium opacity-80">
@@ -37,14 +37,14 @@ export const TransactionsTable = () => {
 
         <div className="flex gap-2 flex-wrap">
           <input
-            className="input input-sm bg-white/5 border border-white/10"
+            className="input input-sm  border border-white/10"
             placeholder="Search category..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
 
           <select
-            className="select select-sm bg-white/5 border border-white/10"
+            className="select select-sm bg- border border-white/10"
             value={filter}
             onChange={(e) =>
               setFilter(e.target.value as TransactionFilter)
@@ -56,7 +56,7 @@ export const TransactionsTable = () => {
           </select>
 
           <select
-            className="select select-sm bg-white/5 border border-white/10"
+            className="select select-sm  border border-white/10"
             value={sort}
             onChange={(e) =>
               setSort(e.target.value as TransactionSort)

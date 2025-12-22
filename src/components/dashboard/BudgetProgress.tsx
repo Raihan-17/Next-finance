@@ -29,7 +29,7 @@ export const BudgetProgress = () => {
   };
 
   return (
-    <div className="glass-panel p-6">
+    <div className="bg-gray-900/50 p-6">
       <h3 className="text-sm font-medium mb-4 opacity-80">
         Budget Usage (This Month)
       </h3>
