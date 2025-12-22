@@ -87,7 +87,7 @@ export const TransactionsTable = () => {
                 className="border-b border-white/5 hover:bg-white/5 transition"
               >
                 <td className="py-2">
-                  {new Date(t.date).toLocaleDateString()}
+                  {new Date(t.date).toLocaleDateString('en-US')}
                 </td>
 
                 <td>{t.category}</td>
