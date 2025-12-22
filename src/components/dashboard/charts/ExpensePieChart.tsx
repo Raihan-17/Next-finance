@@ -45,12 +45,12 @@ export const ExpensePieChart = () => {
   );
 
   return (
-    <div className="bg-gray-900/50 p-8 h-[320px]">
+    <div className="bg-gray-900/50 p-2 h-[320px]">
       <h3 className="text-sm font-medium mb-4 opacity-80">
         Expense Distribution
       </h3>
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={280}>
         <PieChart>
           <Pie
             data={data}
