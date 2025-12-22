@@ -1,6 +1,6 @@
 💰 FinScope — Personal Finance Dashboard
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white)
 ![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-State_Management-764ABC?logo=redux&logoColor=white)
 ![NextAuth](https://img.shields.io/badge/Auth-NextAuth.js-000000?logo=auth0&logoColor=white)
@@ -11,90 +11,121 @@
 FinScope is a modern personal finance dashboard built with Next.js App Router, focused on data visualization, UX polish, and scalable frontend architecture.
 It showcases real-world patterns like authentication, protected routes, Redux state management, responsive dashboards, and analytics-driven UI.
 
+
 ✨ Designed with glassmorphism, calm gradients, and a finance-grade UI language.
+
 
 🚀 Live Features
 🧭 Landing Experience
 
-Animated hero section with carousel
+.Animated hero section with carousel
 
-Typewriter-style text effects
+.Typewriter-style text effects
 
-Dedicated Features page
+.Dedicated Features page
 
-Fully responsive & theme-aware
+.Fully responsive & theme-aware
+
 
 📊 Dashboard (Core Focus)
 
-KPI cards (Income, Expense, Savings)
+.KPI cards (Income, Expense, Savings)
 
-Monthly & weekly analytics
+.Monthly & weekly analytics
 
-Bar, line, and pie charts
+.Bar, line, and pie charts
 
-Budget usage with progress indicators
+.Budget usage with progress indicators
 
-Enhanced transaction table
+.Enhanced transaction table
 
-Mobile-friendly sidebar navigation
+.Mobile-friendly sidebar navigation
+
 
 🔐 Authentication
 
-Email/Password (Credentials)
+.Email/Password (Credentials)
 
-Google OAuth
+.Google OAuth
 
-Register & login flows with feedback
+.Register & login flows with feedback
 
-Protected dashboard routes
+.Protected dashboard routes
 
-Session-based access control (NextAuth v5)
+.Session-based access control (NextAuth v5)
+
 
 🎨 Theming & UI
 
-Dark & Retro themes
+.Dark & Retro themes
 
-Glassmorphism-inspired components
+.Glassmorphism-inspired components
 
-Minimal gradients compatible with both themes
+.Minimal gradients compatible with both themes
 
-Responsive design (mobile → desktop)
+.Responsive design (mobile → desktop)
 
-Consistent motion & hover interactions
+.Consistent motion & hover interactions
+
 
 🧱 Tech Stack
 Core
 
-Next.js 14+ (App Router)
+.Next.js 14+ (App Router)
 
-TypeScript
+.TypeScript
 
-React
+.React
 
-State & Data
+.State & Data
 
-Redux Toolkit
+.Redux Toolkit
 
-Memoized selectors
+.Memoized selectors
 
-JSON-based mock analytics data
+.JSON-based mock analytics data
 
-Authentication
+.Authentication
 
-NextAuth (Auth.js v5)
+.NextAuth (Auth.js v5)
 
-Credentials Provider
+.Credentials Provider
 
-Google Provider
+.Google Provider
 
-Protected server layouts
+.Protected server layouts
 
-UI & Motion
+.UI & Motion
 
-Tailwind CSS
+.Tailwind CSS
 
-DaisyUI
+.DaisyUI
 
-Framer Motion
+.Framer Motion
 
-Lucide Icons / React Icons
+.Lucide Icons / React Icons
+
+
+🔐 Route Protection Pattern
+
+.The dashboard uses server-side protection with App Router:
+
+.Auth check in dashboard/layout.tsx
+
+.UI logic isolated in a client DashboardShell
+
+.Automatic redirect to login if unauthenticated
+
+.Callback URL support after login
+
+.This follows Next.js recommended architecture.
+
+
+👤 Author
+
+Built with care and attention to detail by Abu Raihan.
+If you’re reviewing this as a recruiter or collaborator — welcome 👋
+
+
+App will be available at:
+👉 http://
