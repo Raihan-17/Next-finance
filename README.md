@@ -128,4 +128,4 @@ If you’re reviewing this as a recruiter or collaborator — welcome 👋
 
 
 App will be available at:
-👉 http://
+👉 https://next-finance-iota.vercel.app/
